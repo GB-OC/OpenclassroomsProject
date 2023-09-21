@@ -58,6 +58,13 @@ a {
     color: var(--main-bg-color)
 }
 
+/****** Header ***********/
+.HebergementsActivitesHeader {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
