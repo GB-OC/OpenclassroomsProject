@@ -59,6 +59,14 @@ a {
 }
 
 /****** Header ***********/
+
+header {
+    display: flex;
+}
+
+
+
+
 .HebergementsActivitesHeader {
     display: flex;
     justify-content: flex-end;
