@@ -62,8 +62,21 @@ a {
 .HebergementsActivitesHeader {
     display: flex;
     justify-content: flex-end;
+}
+
+.listeHebergActivites {
+    
+}
+
+.boutonHebergement {
+    
+}
+
+.boutonActivites {
 
 }
+
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
