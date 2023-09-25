@@ -62,26 +62,19 @@ a {
 
 header {
     display: flex;
+    justify-content: space-between;
 }
-
-
-
-
-.HebergementsActivitesHeader {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .listeHebergActivites {
-    
+    list-style-type: none;
+    display: flex;
+    padding-right: 42px;
 }
 
 .boutonHebergement {
-    
-}
-
-.boutonActivites {
-
+    border: 2px;
+    border-top: 2px solid #0065FC;
+    margin-right: 68px;
+    padding: 16px 0px;
 }
 
 
