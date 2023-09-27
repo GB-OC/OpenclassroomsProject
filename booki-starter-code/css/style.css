@@ -58,17 +58,80 @@ a {
     color: var(--main-bg-color)
 }
 
-/****** Header ***********/
+/** General-2609**/
+
+h2 {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+p {
+    margin: 0;
+}
+
+/** Search-bar **/
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2.188rem 0;
+    width : 20%;
+}
+
+.search-icon {
+    padding: 21px;
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+    border: 1px #F2F2F2;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2),
+        -2px 3px 5px rgba(0, 0, 0, 0.2),
+        1px 3px 5px rgba(0, 0, 0, 0.2);
+    font-size: 21px;
+    z-index: 1;
+}
+
+.search-input {
+    flex-grow: 1;
+    border: 1px solid #F2F2F2;
+    border-left-width: 0;
+    border-right-width: 0;
+    outline: none;
+    font-size: 22px;
+    padding: 21px;
+    font-weight: 700;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    max-width: 180px;
+
+}
+
+.search-button {
+    background-color: #0065FC;
+    color: #fff;
+    border: none;
+    padding: 21px 16px;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 700;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/** Header **/
 
 header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1.875rem;
 }
 
 .logoheader {
     width: 62px;
-    height : 20px;
-    padding : 30px 50px;
+    height: 20px;
+    padding: 30px 50px;
 }
 
 
@@ -81,7 +144,7 @@ header {
 
 .boutonHebergement:hover {
     border-top: 2px solid #0065FC;
-    }
+}
 
 .boutonHebergement {
     border: 2px;
@@ -92,7 +155,7 @@ header {
 
 .boutonActivites:hover {
     border-top: 2px solid #0065FC;
-    }
+}
 
 .boutonActivites {
     padding: 18px 0px;
@@ -209,3 +272,7 @@ header {
 @media (max-width: 767.98px) {
     /* ... */
 }
+
+
+/*****TO DO 
+- Pass items in blue inside header. 
