@@ -16,6 +16,7 @@
 body {
     display: flex;
     justify-content: center;
+    margin : 0;
 }
 
 .main-container {
@@ -58,6 +59,7 @@ a {
     color: var(--main-bg-color)
 }
 
+
 /** General-2609**/
 
 h2 {
@@ -83,7 +85,7 @@ header {
 .logoheader {
     width: 62px;
     height: 20px;
-    padding: 30px 50px 0px;
+    padding: 30px 0px 0px;
 }
 
 
@@ -242,6 +244,54 @@ header {
     width: 65%;
 }
 
+.hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hebergements-cards a {
+    width: 31%;
+}
+
+.hebergements-cards .card {
+    margin-top: 33px;
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 124px;
+    border-radius: 20px;
+}
+
+.hebergements-cards .card-content {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+.afficher-plus {
+    margin-top: 33px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -335,11 +385,19 @@ header {
 
 /*****TO DO 
 - Pass items in blue inside header. 
+-rename mes H1hebergements et autre css zarbi en copiant base de code
 
 
 /**** Questions
 - PB avec main et class main dans le html ?
--H1, H2, P ok ? en plein centre un P ? Trouvez votre héb en H1 ? 
+- H1, H2, P ok ? en plein centre un P ? Trouvez votre héb en H1 ? 
 - fontawesome bug ?  
 -moddif padding en dessous du logo pour avoir header propre et pas des carets gigantesques
 - filter text fonctionne pas.
+
+bookie logo mal décal, 
+affiner barre de recherche
+
+Trouvez votre hébergement pour des vacances de rêve H1 (vérif si corrigé ATTENTIVEMENT) 
+Et marseille hebergement et activité  H2 
+Mettre balise nav autour de ul dans header.  
