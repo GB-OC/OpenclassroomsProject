@@ -16,7 +16,7 @@
 body {
     display: flex;
     justify-content: center;
-    margin : 0;
+    margin: 0;
 }
 
 .main-container {
@@ -43,6 +43,10 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.card.no-padding {
+    padding: 0;
+}
+
 .card img {
     object-fit: cover;
 }
@@ -63,6 +67,12 @@ a {
 /** General-2609**/
 
 h2 {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 22px;
     margin: 0;
     margin-bottom: 8px;
 }
@@ -125,7 +135,7 @@ header {
     padding: 5px;
     border-radius: 5px;
     margin: 2.188rem 0;
-    width : 20%;
+    width: 20%;
 }
 
 .search-icon {
@@ -175,12 +185,15 @@ header {
     align-items: baseline;
 }
 
-.filter-text h2 {
+.filter-text {
     font-size: 18px;
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 700;
 }
 
 .filter-button-group {
-    padding : 0;
+    padding: 0;
     display: flex;
 }
 
@@ -206,7 +219,7 @@ header {
     background-color: #DEEBFF;
 }
 
-        /**info-text**/
+/**info-text**/
 
 .info-bar {
     margin-bottom: 35px;
@@ -230,6 +243,7 @@ header {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 35px;
 }
 
 .hebergements-and-populaires section {
@@ -284,7 +298,7 @@ header {
 }
 
 .afficher-plus {
-    margin-top: 33px;
+    margin-top: 30px;
     font-weight: 700;
     font-size: 18px;
 }
@@ -334,8 +348,38 @@ header {
     margin-bottom: 5px;
 }
 
+/********Activités*******/
 
+.activites {
+    padding: 30px;
+}
 
+.activites h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.activites-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activites-cards .card-content {
+    padding-left: 15px;
+    display: flex;
+}
+
+.activites-cards a {
+    width: 23.6%;
+    margin-top: 33px;
+}
+
+.activites-cards img {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -383,18 +427,12 @@ header {
 /*****TO DO 
 - Pass items in blue inside header. 
 -rename mes H1hebergements et autre css zarbi en copiant base de code
+- afficher plus clicable
 
+Questions 05/10. 
+- part 6-3 pas fait, comprend pas : Une fois dimensionnée, l’image devrait être déformée. La propriété CSS
+`object-fit` permettra de corriger cela.
+-bug avec le a qui est dans commit différent sur git.
 
-/**** Questions
-- PB avec main et class main dans le html ?
-- H1, H2, P ok ? en plein centre un P ? Trouvez votre héb en H1 ? 
-- fontawesome bug ?  
--moddif padding en dessous du logo pour avoir header propre et pas des carets gigantesques
-- filter text fonctionne pas.
-
-bookie logo mal décal, 
-affiner barre de recherche
-
-Trouvez votre hébergement pour des vacances de rêve H1 (vérif si corrigé ATTENTIVEMENT) 
-Et marseille hebergement et activité  H2 
-Mettre balise nav autour de ul dans header.  
+to do 
+affiner barre de recherche 
