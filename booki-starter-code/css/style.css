@@ -81,7 +81,34 @@ p {
     margin: 0;
 }
 
+footer { 
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: flex-start;
+}
 
+
+.footer-column {
+    list-style-type: none;
+    margin: 20px;
+    width : 33%
+    
+}
+
+.footer-column li {
+        list-style-type: none;
+        margin-top: 15px;
+    }
+
+.footer-column ul li:first-child {
+        font-weight: bold;
+        margin-top: 0;
+    }
+
+.footer-column ul {
+    padding: 0;
+    margin: 0;
+    }
 
 
 /** Header **/
@@ -95,7 +122,7 @@ header {
 .logoheader {
     width: 62px;
     height: 20px;
-    padding: 30px 0px 0px;
+    margin-top: 30px;
 }
 
 
@@ -108,17 +135,19 @@ header {
 
 .boutonHebergement:hover {
     border-top: 2px solid #0065FC;
+    color : #0065FC
 }
 
 .boutonHebergement {
     border-top: 2px solid transparent;
     margin-right: 68px;
-    padding: 16px 0px;
+    padding: 18px 0px;
 }
 
 
 .boutonActivites:hover {
     border-top: 2px solid #0065FC;
+    color : #0065FC
 }
 
 .boutonActivites {
@@ -131,11 +160,10 @@ header {
 
 .search-bar {
     display: flex;
-    align-items: center;
-    padding: 5px;
     border-radius: 5px;
-    margin: 2.188rem 0;
+    margin: 35px 0;
     width: 20%;
+    
 }
 
 .search-icon {
@@ -143,11 +171,7 @@ header {
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
     border: 1px #F2F2F2;
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.2),
-        -2px 3px 5px rgba(0, 0, 0, 0.2),
-        1px 3px 5px rgba(0, 0, 0, 0.2);
     font-size: 21px;
-    z-index: 1;
 }
 
 .search-input {
@@ -159,7 +183,6 @@ header {
     font-size: 22px;
     padding: 21px;
     font-weight: 700;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     max-width: 180px;
 
 }
@@ -173,7 +196,6 @@ header {
     cursor: pointer;
     font-size: 22px;
     font-weight: 700;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
 
 /**Filter-Bar**/
@@ -188,13 +210,13 @@ header {
 .filter-text {
     font-size: 18px;
     margin: 0;
-    margin-bottom: 8px;
     font-weight: 700;
 }
 
 .filter-button-group {
     padding: 0;
     display: flex;
+    margin: 0;
 }
 
 .filter-button {
@@ -219,6 +241,15 @@ header {
     background-color: #DEEBFF;
 }
 
+.filter-button-subgroup-1 {
+    display: flex;
+}
+
+.filter-button-subgroup-2 {
+    display: flex;
+}
+
+
 /**info-text**/
 
 .info-bar {
@@ -236,6 +267,7 @@ header {
     text-align: center;
     margin-right: 15px;
     line-height: 24px;
+    min-width: 24px;
 }
 
 
@@ -416,12 +448,162 @@ header {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .filter-bar {
+        flex-direction: column;
+    }
+
+    .filter-button-group {
+        margin-top: 20px;
+    }
+
+    .filter-button-subgroup-1 li:first-child {
+        margin-left: 0;
+    }
+
+
+
 }
 
 /* Small devices (phones, less than 768px) */
+
 @media (max-width: 767.98px) {
-    /* ... */
+
+    .main-container {
+        padding : 0 20px;
+    }
+
+    header {
+        flex-direction: column;
+        margin-bottom: 30px;
+        align-items: center;
+      }
+    
+    .logoheader {
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .listeHebergActivites {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .boutonActivites, .boutonHebergement {
+        width: 50%;
+        text-align: center;
+        border-bottom: 2px solid #F2F2F2;
+        border-top : 0;
+        margin : 0; 
+        padding-top: 0;
+        padding: bottom -15px;
+    }
+
+    .boutonHebergement:hover {
+        border-bottom: 2px solid #0065FC;
+        border-top :0;
+    }
+    
+    .boutonActivites:hover {
+        border-bottom: 2px solid #0065FC;
+        border-top :0;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .filter-button:first-child {
+        margin-left: 0;
+      }
+
+    .filter-button-group {
+        flex-direction: column;
+    }
+
+    .filter-button-subgroup-2 {
+        margin-top: 20px;
+    }
+    .filter-button {
+        width: 50%;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .populaires {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .hebergements-cards { 
+        display: block;
+    }
+
+    .populaires-cards {
+        display: block;
+    }
+
+    .populaires-cards .card { 
+        margin-top: 15px;
+    }
+
+    .hebergements-cards .card {
+        margin-top: 15px;
+    }
+
+    .activites-cards {
+        display: block;
+    }
+
+    .card.no-padding {
+        margin-top: 15px;
+    }
+    
+    .activites h2 {
+        margin-bottom: 30px;
+    }
+
+    .card img {
+        max-height: 141px;
+    }
+
+    .card-title {
+        margin: 20px 0;
+    }
+    
+    footer {
+        display: block;
+        padding: 30px;
+        flex-direction: column;
+        margin-top: 35px;
+        padding-top: 10px;
+
+    }
+
+    .footer-column {
+        margin: 0px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .footer :first-child {
+        margin-top: 0px;
+    }
+
+    .footer-column:nth-child(2) {
+        margin-top: 50px;
+    }
+    
+    .footer-column:nth-child(3) {
+        margin-top: 50px;
+    }
+
+
 }
+
 
 
 /*****TO DO 
@@ -436,3 +618,32 @@ Questions 05/10.
 
 to do 
 affiner barre de recherche 
+
+
+text elypsis pour fixer les boites qui se réduisent et se déforment= 
+overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  propriété gap, lchoisit dimmension d ela marge entre élément et fonctionne ave flex. 
+  pas d'arrodi en bas sur cartes dans hebergemetn et dans activités. 
+
+  Le haut du logo bookie est clicable berk.
+
+  afficher plus par clicable 
+
+  faire émotes plus grandes dans filtre et recherche ? 
+
+  semaine pro, soutenance blanche.
+
+  
+pk la     .filter-button:first-child {
+        margin-left: 0;
+      } ça suffit alors qu'avant j'ai du faire .footer-column ul li:first-child {
+        font-weight: bold;
+        margin-top: 0;
+    } pour le footer, je devais désigner ul et im 
+
+    "afficher plus" pas clicable dans hébergement a marseille
+
+    16 erreur w3C lol
