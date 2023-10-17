@@ -81,7 +81,7 @@ p {
     margin: 0;
 }
 
-footer { 
+footer {
     background-color: #F2F2F2;
     display: flex;
     justify-content: flex-start;
@@ -91,24 +91,23 @@ footer {
 .footer-column {
     list-style-type: none;
     margin: 20px;
-    width : 33%
-    
+    width: 33%
 }
 
 .footer-column li {
-        list-style-type: none;
-        margin-top: 15px;
-    }
+    list-style-type: none;
+    margin-top: 15px;
+}
 
 .footer-column ul li:first-child {
-        font-weight: bold;
-        margin-top: 0;
-    }
+    font-weight: bold;
+    margin-top: 0;
+}
 
 .footer-column ul {
     padding: 0;
     margin: 0;
-    }
+}
 
 
 /** Header **/
@@ -135,7 +134,7 @@ header {
 
 .boutonHebergement:hover {
     border-top: 2px solid #0065FC;
-    color : #0065FC
+    color: #0065FC
 }
 
 .boutonHebergement {
@@ -147,7 +146,7 @@ header {
 
 .boutonActivites:hover {
     border-top: 2px solid #0065FC;
-    color : #0065FC
+    color: #0065FC
 }
 
 .boutonActivites {
@@ -163,15 +162,19 @@ header {
     border-radius: 5px;
     margin: 35px 0;
     width: 20%;
-    
+    max-height: 50px;
+
 }
 
 .search-icon {
-    padding: 21px;
+    padding: 13px;
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
     border: 1px #F2F2F2;
-    font-size: 21px;
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+    line-height: 24px;
 }
 
 .search-input {
@@ -191,11 +194,15 @@ header {
     background-color: #0065FC;
     color: #fff;
     border: none;
-    padding: 21px 16px;
+    padding: 11px 16px;
     border-radius: 0 15px 15px 0;
     cursor: pointer;
     font-size: 22px;
     font-weight: 700;
+}
+
+.search-button .fa-magnifying-glass {
+    display: none;
 }
 
 /**Filter-Bar**/
@@ -217,6 +224,14 @@ header {
     padding: 0;
     display: flex;
     margin: 0;
+    justify-content: center;
+}
+
+.filter-button-group2 {
+    padding: 0;
+    display: flex;
+    margin: 0;
+    justify-content: center;
 }
 
 .filter-button {
@@ -231,6 +246,7 @@ header {
     white-space: nowrap;
     font-weight: 700;
     font-size: 17px;
+    min-width: 130px;
 }
 
 .filter-button i {
@@ -241,14 +257,9 @@ header {
     background-color: #DEEBFF;
 }
 
-.filter-button-subgroup-1 {
+.filter-button-group-1-2 {
     display: flex;
 }
-
-.filter-button-subgroup-2 {
-    display: flex;
-}
-
 
 /**info-text**/
 
@@ -279,15 +290,15 @@ header {
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
-    border-radius: 20px;
-    padding: 30px;
     box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: var(--main-bg-color);
 }
 
 .hebergements-cards {
@@ -305,7 +316,7 @@ header {
 .hebergements-cards img {
     width: 100%;
     height: 124px;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .hebergements-cards .card-content {
@@ -335,9 +346,16 @@ header {
     font-size: 18px;
 }
 
+.afficher-plus:hover {
+    cursor: pointer;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: var(--main-bg-color);
 }
 
 .populaires-title {
@@ -410,7 +428,7 @@ header {
 .activites-cards img {
     width: 100%;
     height: 380px;
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -453,7 +471,17 @@ header {
         flex-direction: column;
     }
 
-    .filter-button-group {
+    .filter-button-group,
+    .filter-button-group2 {
+        flex-direction: row;
+    }
+
+    .filter-text {
+        text-align: center;
+    }
+
+    .filter-button-group,
+    .filter-button-group2 {
         margin-top: 20px;
     }
 
@@ -470,15 +498,26 @@ header {
 @media (max-width: 767.98px) {
 
     .main-container {
-        padding : 0 20px;
+        padding: 0
+    }
+
+    h1,
+    p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .search-bar {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     header {
         flex-direction: column;
         margin-bottom: 30px;
         align-items: center;
-      }
-    
+    }
+
     .logoheader {
         display: flex;
         margin-bottom: 30px;
@@ -490,55 +529,90 @@ header {
         justify-content: space-between;
         width: 100%;
     }
-    .boutonActivites, .boutonHebergement {
+
+    .boutonActivites,
+    .boutonHebergement {
         width: 50%;
         text-align: center;
         border-bottom: 2px solid #F2F2F2;
-        border-top : 0;
-        margin : 0; 
+        border-top: 0;
+        margin: 0;
         padding-top: 0;
-        padding: bottom -15px;
     }
 
     .boutonHebergement:hover {
         border-bottom: 2px solid #0065FC;
-        border-top :0;
+        border-top: 0;
     }
-    
+
     .boutonActivites:hover {
         border-bottom: 2px solid #0065FC;
-        border-top :0;
+        border-top: 0;
     }
 
     nav {
         width: 100%;
     }
 
+    .filter-bar {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .info-bar {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .filter-button:first-child {
         margin-left: 0;
-      }
-
-    .filter-button-group {
-        flex-direction: column;
     }
+
 
     .filter-button-subgroup-2 {
         margin-top: 20px;
+        /**QUEWA **/
     }
+
     .filter-button {
-        width: 50%;
+        margin-left: 10px;
     }
+
+    .filter-button-group {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter-button-group2 {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter-button-group-1-2 {
+        display: block;
+    }
+
 
     .hebergements-and-populaires {
         flex-direction: column-reverse;
+        margin: 0px;
     }
 
     .populaires {
         margin-top: 0;
         margin-bottom: 30px;
+        border-radius: 0;
+        padding: 20px;
     }
 
-    .hebergements-cards { 
+    .hebergements {
+        padding: 20px;
+        width: auto;
+        background-color: white;
+        border-radius: 0px;
+    }
+
+    .hebergements-cards {
         display: block;
     }
 
@@ -546,12 +620,13 @@ header {
         display: block;
     }
 
-    .populaires-cards .card { 
+    .populaires-cards .card {
         margin-top: 15px;
     }
 
     .hebergements-cards .card {
         margin-top: 15px;
+
     }
 
     .activites-cards {
@@ -561,7 +636,7 @@ header {
     .card.no-padding {
         margin-top: 15px;
     }
-    
+
     .activites h2 {
         margin-bottom: 30px;
     }
@@ -573,7 +648,7 @@ header {
     .card-title {
         margin: 20px 0;
     }
-    
+
     footer {
         display: block;
         padding: 30px;
@@ -596,54 +671,18 @@ header {
     .footer-column:nth-child(2) {
         margin-top: 50px;
     }
-    
+
     .footer-column:nth-child(3) {
         margin-top: 50px;
     }
 
+    .search-button .fa-magnifying-glass {
+        display: inline-block;
+    }
+
+    .search-button .desktop-text {
+        display: none;
+    }
+
 
 }
-
-
-
-/*****TO DO 
-- Pass items in blue inside header. 
--rename mes H1hebergements et autre css zarbi en copiant base de code
-- afficher plus clicable
-
-Questions 05/10. 
-- part 6-3 pas fait, comprend pas : Une fois dimensionnée, l’image devrait être déformée. La propriété CSS
-`object-fit` permettra de corriger cela.
--bug avec le a qui est dans commit différent sur git.
-
-to do 
-affiner barre de recherche 
-
-
-text elypsis pour fixer les boites qui se réduisent et se déforment= 
-overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-
-  propriété gap, lchoisit dimmension d ela marge entre élément et fonctionne ave flex. 
-  pas d'arrodi en bas sur cartes dans hebergemetn et dans activités. 
-
-  Le haut du logo bookie est clicable berk.
-
-  afficher plus par clicable 
-
-  faire émotes plus grandes dans filtre et recherche ? 
-
-  semaine pro, soutenance blanche.
-
-  
-pk la     .filter-button:first-child {
-        margin-left: 0;
-      } ça suffit alors qu'avant j'ai du faire .footer-column ul li:first-child {
-        font-weight: bold;
-        margin-top: 0;
-    } pour le footer, je devais désigner ul et im 
-
-    "afficher plus" pas clicable dans hébergement a marseille
-
-    16 erreur w3C lol
