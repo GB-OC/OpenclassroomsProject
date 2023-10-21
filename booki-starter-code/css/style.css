@@ -53,6 +53,9 @@ a {
 
 .card-title {
     font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .euro {
@@ -205,6 +208,14 @@ header {
     display: none;
 }
 
+.search-icon i.fa-solid.fa-location-dot {
+    color: #000000;
+}
+
+.search-button i.fa-solid.fa-magnifying-glass {
+    color: #ffffff;
+}
+
 /**Filter-Bar**/
 
 .filter-bar {
@@ -344,6 +355,7 @@ header {
     margin-top: 30px;
     font-weight: 700;
     font-size: 18px;
+    display: inline-block;
 }
 
 .afficher-plus:hover {
